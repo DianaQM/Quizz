@@ -39,31 +39,45 @@
                   <h4 class="mt-1 mb-5 pb-1">Inicia Sesión</h4>
                 </div>
 
-                <form action="{{ route('login') }}" method="post">
-                    @csrf
-  <p>Por favor inicia sesión</p>
+               <!-- ... (código anterior) ... -->
 
-  <div class="form-outline mb-4">
-    <label class="form-label" for="form2Example11">Usuario</label>
-    <input type="email" name="email" id="form2Example11" class="form-control" placeholder="Ingresa tu correo" />
-  </div>
+<form action="{{ route('register') }}" method="post">
+    @csrf
 
-  <div class="form-outline mb-4">
-    <label class="form-label" for="form2Example22">Contraseña</label>
-    <input type="password" name="password" id="form2Example22" class="form-control" />
-  </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example11">Nombre</label>
+        <input type="text" name="name" id="form2Example11" class="form-control" placeholder="Ingresa nombre">
+    </div>
 
-  <div class="text-center pt-1 mb-5 pb-1">
-  <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Ingresar</button>
-  <a class="text-muted d-block" href="#!">Olvidaste tu contraseña?</a>
-</div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example11">Correo</label>
+        <input type="email" name="email" id="form2Example11" class="form-control" placeholder="Ingresa correo" >
+    </div>
 
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example22">Contraseña</label>
+        <input type="password" name="password" id="form2Example22" class="form-control" />
+    </div>
 
-  <div class="d-flex align-items-center justify-content-center pb-4">
-    <p class="mb-0 me-2">Don't have an account?</p>
-    <button type="button" class="btn btn-outline-danger">Create new</button>
-  </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example22">Confirmar contraseña</label>
+        <input type="password" name="password_confirmation" id="form2Example22" class="form-control" />
+    </div>
+
+    <!-- ... (código posterior) ... -->
+
+    <div class="text-center pt-1 mb-5 pb-1">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Registrarme</button>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <p class="mb-0 me-2">¿Ya tienes una cuenta?</p>
+        <a href="{{ route('login') }}" class="btn btn-outline-danger">Iniciar sesión</a>
+    </div>
 </form>
+
+<!-- ... (código posterior) ... -->
+
 
 
               </div>
@@ -82,20 +96,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

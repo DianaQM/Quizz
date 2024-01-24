@@ -39,12 +39,12 @@
                   <h4 class="mt-1 mb-5 pb-1">Inicia Sesión</h4>
                 </div>
 
-                <form action="{{ route('login') }}" method="post">
-                    @csrf
+                <form action="{{route('login')}}" method="post">
+                   
   <p>Por favor inicia sesión</p>
 
   <div class="form-outline mb-4">
-    <label class="form-label" for="form2Example11">Usuario</label>
+    <label class="form-label" for="form2Example11">Correo</label>
     <input type="email" name="email" id="form2Example11" class="form-control" placeholder="Ingresa tu correo" />
   </div>
 
@@ -60,7 +60,7 @@
 
 
   <div class="d-flex align-items-center justify-content-center pb-4">
-    <p class="mb-0 me-2">Don't have an account?</p>
+    <p class="mb-0 me-2">No tienes una cuenta?</p>
     <a href="{{ route('register') }}" class="btn btn-outline-danger">Registrarme</a>
   </div>
 </form>
