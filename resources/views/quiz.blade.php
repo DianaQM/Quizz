@@ -6,10 +6,12 @@
     <title>Snippet - GoSNippets</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href='' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ asset('assets/estilos1.css') }}">
    
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
     <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+
 </head>
 <body oncontextmenu='return false' class='snippet-body'>
     <center>

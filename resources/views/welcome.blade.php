@@ -1,1215 +1,903 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snippet - GoSNippets</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href='' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ asset('assets/estilos1.css') }}">
+   
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Fruitables - Vegetable Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+</head>
+<body oncontextmenu='return false' class='snippet-body'>
+    <center>
+        <h1>QUIZ FOR FORNITE </h1>
+    </center>
+    
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+                <div class="modal-header">
+                    <div class="photo">
+                    <img src="{{ asset('assets/fornite.png') }}">
+                      </div>
+                    
+                    <h3>¿Cuál es tu color favorito?</h3>
+                    
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="a">Negro
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="b">Rojo
+                                </label>
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="c">Azul
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="d">Amarillo
+                                </label>
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="e">Dorado
+                                </label>
 
-
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" role="status"></div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar start -->
-        <div class="container-fluid fixed-top">
-            <div class="container topbar bg-primary d-none d-lg-block">
-                <div class="d-flex justify-content-between">
-                    <div class="top-info ps-2">
-                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">123 Street, New York</a></small>
-                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
-                    </div>
-                    <div class="top-link pe-2">
-                        <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
-                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars text-primary"></span>
-                    </button>
-                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Shop</a>
-                            <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <a href="cart.html" class="dropdown-item">Cart</a>
-                                    <a href="chackout.html" class="dropdown-item">Chackout</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
-                                </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-                        <div class="d-flex m-3 me-0">
-                            <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
-                            <a href="#" class="position-relative me-4 my-auto">
-                                <i class="fa fa-shopping-bag fa-2x"></i>
-                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
-                            </a>
-                            <a href="#" class="my-auto">
-                                <i class="fas fa-user fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- Navbar End -->
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="f">Café
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="g">Rosa
+                                </label>
 
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="h">Verde
+                                </label>
 
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="i">Blanco
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q1" value="j">Morado
+                                </label>
+
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+
                 </div>
             </div>
         </div>
-        <!-- Modal Search End -->
+    </div>
 
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="photo">
+                        <img src="img/equipo.jpg" alt="Photo" style="width:100%;">
+                      </div>
+                    
+                    <h3>¿Cuál modo es que juegas frecuentemente?</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="a">Solitario
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="b">Dúo
+                                </label>
 
-        <!-- Hero Start -->
-        <div class="container-fluid py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
-                        <h1 class="mb-5 display-3 text-primary">Organic Veggies & Fruits Foods</h1>
-                        <div class="position-relative mx-auto">
-                            <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search">
-                            <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Submit Now</button>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-5">
-                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active rounded">
-                                    <img src="img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
-                                    <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
-                                </div>
-                                <div class="carousel-item rounded">
-                                    <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                    <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
-                                </div>
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="c">Tríos
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="d">Squads
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="e">Fortnite Festival
+                                </label>
+
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="f">Creativo
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="g">Rocket Racing
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="h">Lego Fortnite
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="i">Refriega de Equipos
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q2" value="j">Oro Solido
+                                </label>
+
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
+    </div>
 
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="photo">
+                        <img src="img/habilidad.jpg" alt="Photo" style="width:100%;">
+                      </div>
+                    <h3>Escoge una palabra que te defina jugando</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="a">Hábil
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="b">Campero
+                                </label>
 
-        <!-- Featurs Section Start -->
-        <div class="container-fluid featurs py-5">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-car-side fa-3x text-white"></i>
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="c">Suertudo
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="d">Francotirador
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="e">Experto
+                                </label>
+
                             </div>
-                            <div class="featurs-content text-center">
-                                <h5>Free Shipping</h5>
-                                <p class="mb-0">Free on order over $300</p>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="f">Tryhard
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="g">Distraído
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="h">Constructor
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="i">Líder
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q3" value="j">Competitivo
+                                </label>
+
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-user-shield fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>Security Payment</h5>
-                                <p class="mb-0">100% security payment</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-exchange-alt fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>30 Day Return</h5>
-                                <p class="mb-0">30 day money guarantee</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fa fa-phone-alt fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>24/7 Support</h5>
-                                <p class="mb-0">Support every time fast</p>
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Featurs Section End -->
+    </div>
 
 
-        <!-- Fruits Shop Start-->
-        <div class="container-fluid fruite py-5">
-            <div class="container py-5">
-                <div class="tab-class text-center">
-                    <div class="row g-4">
-                        <div class="col-lg-4 text-start">
-                            <h1>Our Organic Products</h1>
-                        </div>
-                        <div class="col-lg-8 text-end">
-                            <ul class="nav nav-pills d-inline-flex text-center mb-5">
-                                <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-                                        <span class="text-dark" style="width: 130px;">All Products</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                                        <span class="text-dark" style="width: 130px;">Vegetables</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                                        <span class="text-dark" style="width: 130px;">Fruits</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                                        <span class="text-dark" style="width: 130px;">Bread</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
-                                        <span class="text-dark" style="width: 130px;">Meat</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Grapes</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Grapes</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Raspberries</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Apricots</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Banana</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Oranges</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Raspberries</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Grapes</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Grapes</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Raspberries</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-3" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Oranges</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Apple</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-4" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Grapes</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Apricots</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-5" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Banana</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Raspberries</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Oranges</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>      
-            </div>
-        </div>
-        <!-- Fruits Shop End-->
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="photo">
+                        <img src="img/lugar.jpg" alt="Photo" style="width:100%;">
+                      </div>
+                    
+                    <h3>Escoge un lugar donde aterrizarías (Img de localidades del juego). </h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="a">Casita del cazador
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="b">Pueblo Tomate
+                                </label>
 
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="c">Parque Placentero
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="d">Balsa Botín
+                                </label>
 
-        <!-- Featurs Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div class="service-item bg-secondary rounded border border-secondary">
-                                <img src="img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="px-4 rounded-bottom">
-                                    <div class="service-content bg-primary text-center p-4 rounded">
-                                        <h5 class="text-white">Fresh Apples</h5>
-                                        <h3 class="mb-0">20% OFF</h3>
-                                    </div>
-                                </div>
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="e">Pisos Picados
+                                </label>
+
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div class="service-item bg-dark rounded border border-dark">
-                                <img src="img/featur-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="px-4 rounded-bottom">
-                                    <div class="service-content bg-light text-center p-4 rounded">
-                                        <h5 class="text-primary">Tasty Fruits</h5>
-                                        <h3 class="mb-0">Free delivery</h3>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="f">Industrias Stark
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="g">Castillo Coral
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="h">La Ciudadela
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="i">Villa Viñedo
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q4" value="j">Coliseo Colosal
+                                </label>
+
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div class="service-item bg-primary rounded border border-primary">
-                                <img src="img/featur-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="px-4 rounded-bottom">
-                                    <div class="service-content bg-secondary text-center p-4 rounded">
-                                        <h5 class="text-white">Exotic Vegitable</h5>
-                                        <h3 class="mb-0">Discount 30$</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Featurs End -->
+    </div>
 
 
-        <!-- Vesitable Shop Start-->
-        <div class="container-fluid vesitable py-5">
-            <div class="container py-5">
-                <h1 class="mb-0">Fresh Organic Vegetables</h1>
-                <div class="owl-carousel vegetable-carousel justify-content-center">
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   
+                    <div class="photo">
+                        <img src="img/picos.jpg" alt="Photo" style="width:100%;">
+                      </div>
+                    <h3>¿Cuál de estos picos escogerías?</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="a">Hacha Leviatan
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="b">Pico estelar
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="c">Hacha de caramelo festiva
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="d">Bastón Estelar
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="e">Bate de Harley
+                                </label>
+
+                            </div>
                         </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="f">Diamond Jack
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="g">Picahielos
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="h">Palanca
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q5" value="i">Guadaña
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="j">Pico Palanca
+                                </label>
+
                             </div>
                         </div>
                     </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="img/vegetable-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="img/vegetable-item-3.png" class="img-fluid w-100 rounded-top bg-light" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Banana</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="img/vegetable-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Bell Papper</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Potatoes</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Potatoes</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Vesitable Shop End -->
+    </div>
 
 
-        <!-- Banner Section Start-->
-        <div class="container-fluid banner bg-secondary my-5">
-            <div class="container py-5">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="py-4">
-                            <h1 class="display-3 text-white">Fresh Exotic Fruits</h1>
-                            <p class="fw-normal display-3 text-dark mb-4">in Our Store</p>
-                            <p class="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
-                            <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
+
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="photo">
+                        <img src="img/baile.jpg" alt="Photo" style="width:100%;">
+                      </div>
+                    
+                    <h3>¿Cuál de estos bailes usarías?</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="a">In da party
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="b">Risa de burro
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="c">Ritmazo
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="d">Blinding lights
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="e">Socks
+                                </label>
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="position-relative">
-                            <img src="img/baner-1.png" class="img-fluid w-100 rounded" alt="">
-                            <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style="width: 140px; height: 140px; top: 0; left: 0;">
-                                <h1 style="font-size: 100px;">1</h1>
-                                <div class="d-flex flex-column">
-                                    <span class="h2 mb-0">50$</span>
-                                    <span class="h4 text-muted mb-0">kg</span>
-                                </div>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="f">Barrido y cuenta nueva
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="g">Pasos de baile
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="h">Toosie Slide
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="i">Bizcohito
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q6" value="j">Mua,ja,ja
+                                </label>
+
                             </div>
                         </div>
                     </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Banner Section End -->
+    </div>
 
 
-        <!-- Bestsaler Product Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-                    <h1 class="display-4">Bestseller Products</h1>
-                    <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+
+
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <div class="photo">
+                        <img src="img/mochila.png" alt="Photo" style="width:100%;">
+                      </div>
+                    <h3>¿Cuál de estas mochilas escogerías?</h3>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="img/best-product-1.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">3.12 $</h4>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="a">Alas perfectas
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="b">Escudo Oscuro
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="c">Tele Familiar
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="d">Sin mochila
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="e">Pepinillo Rick
+                                </label>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="f">Unicorn Flakes
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="g">Girasol
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="h">Eferas del Poder
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="i">Woodsy
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q7" value="j">Dodger
+                                </label>
+
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="img/best-product-2.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">3.12 $</h4>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="img/best-product-3.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">3.12 $</h4>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="img/best-product-4.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">3.12 $</h4>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="img/best-product-5.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">3.12 $</h4>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="img/best-product-6.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">3.12 $</h4>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="text-center">
-                            <img src="img/fruite-item-1.jpg" class="img-fluid rounded" alt="">
-                            <div class="py-4">
-                                <a href="#" class="h5">Organic Tomato</a>
-                                <div class="d-flex my-3 justify-content-center">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">3.12 $</h4>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="text-center">
-                            <img src="img/fruite-item-2.jpg" class="img-fluid rounded" alt="">
-                            <div class="py-4">
-                                <a href="#" class="h5">Organic Tomato</a>
-                                <div class="d-flex my-3 justify-content-center">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">3.12 $</h4>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="text-center">
-                            <img src="img/fruite-item-3.jpg" class="img-fluid rounded" alt="">
-                            <div class="py-4">
-                                <a href="#" class="h5">Organic Tomato</a>
-                                <div class="d-flex my-3 justify-content-center">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">3.12 $</h4>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="text-center">
-                            <img src="img/fruite-item-4.jpg" class="img-fluid rounded" alt="">
-                            <div class="py-2">
-                                <a href="#" class="h5">Organic Tomato</a>
-                                <div class="d-flex my-3 justify-content-center">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">3.12 $</h4>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Bestsaler Product End -->
+    </div>
 
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <div class="photo">
+                        <img src="img/planeador.jpg" alt="Photo" style="width:100%;">
+                      </div>
+                    <h3>¿Cuál de estos planeadores escogerías?</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="a">Numbola
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="b">Alas Brillantes Azucaradas
+                                </label>
 
-        <!-- Fact Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="bg-light p-5 rounded">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <div class="counter bg-white rounded p-5">
-                                <i class="fa fa-users text-secondary"></i>
-                                <h4>satisfied customers</h4>
-                                <h1>1963</h1>
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="c">Chicloso
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="d">Kurama
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="e">Shen Long
+                                </label>
+
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <div class="counter bg-white rounded p-5">
-                                <i class="fa fa-users text-secondary"></i>
-                                <h4>quality of service</h4>
-                                <h1>99%</h1>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <div class="counter bg-white rounded p-5">
-                                <i class="fa fa-users text-secondary"></i>
-                                <h4>quality certificates</h4>
-                                <h1>33</h1>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <div class="counter bg-white rounded p-5">
-                                <i class="fa fa-users text-secondary"></i>
-                                <h4>Available Products</h4>
-                                <h1>789</h1>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="f">Vinilo Volador
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="g">El paraguas
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="h">Alma Alada
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="i">Tabla de Balvin
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q8" value="j">Extra Queso
+                                </label>
+
                             </div>
                         </div>
                     </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Fact Start -->
+    </div>
 
 
-        <!-- Tastimonial Start -->
-        <div class="container-fluid testimonial py-5">
-            <div class="container py-5">
-                <div class="testimonial-header text-center">
-                    <h4 class="text-primary">Our Testimonial</h4>
-                    <h1 class="display-5 mb-5 text-dark">Our Client Saying!</h1>
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <div class="photo">
+                        <img src="img/objetos.jpg" alt="Photo" style="width:100%;">
+                      </div>
+                    <h3>¿Qué objeto del juego te gusta más?</h3>
                 </div>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="a">Granadas de impulso
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="b">Saltadera
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="c">Jetpack
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="d">Escudo despegable
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="e">Lapas
+                                </label>
+
                             </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="bg-secondary rounded">
-                                    <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="ms-4 d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="f">Gancho
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="g">Arbusto
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="h">PGranda Buggie
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="i">Lapa de Racimo
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q9" value="j">Fuerte portatil
+                                </label>
+
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="bg-secondary rounded">
-                                    <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="ms-4 d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="bg-secondary rounded">
-                                    <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="ms-4 d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Tastimonial End -->
+    </div>
 
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
-            <div class="container py-5">
-                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
-                    <div class="row g-4">
-                        <div class="col-lg-3">
-                            <a href="#">
-                                <h1 class="text-primary mb-0">Fruitables</h1>
-                                <p class="text-secondary mb-0">Fresh products</p>
-                            </a>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative mx-auto">
-                                <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
-                                <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="d-flex justify-content-end pt-3">
-                                <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <div class="photo">
+                        <img src="img/armas.jpg" alt="Photo" style="width:100%;">
+                      </div>
+                    <h3>¿Qué arma te gusta mas?</h3>
                 </div>
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-light mb-3">Why People Like us!</h4>
-                            <p class="mb-4">typesetting, remaining essentially unchanged. It was 
-                                popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
-                            <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Columna izquierda con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="a">Escopeta
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="b">Rifle
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="c">Subfusil
+                                </label>
+                                
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="d">Pistola
+                                </label>
+
+                                <label class="element-animation1 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="e">Francotirador
+                                </label>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Columna derecha con 5 preguntas y respuestas -->
+                            <div class="quiz" id="quiz" data-toggle="buttons">
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="f">Armas explosivas
+                                </label>
+                                <!-- Otras preguntas y respuestas... -->
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="g">HiperSubfusil
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="h">Cuchilla de Gancho
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="i">Fusil de Caza
+                                </label>
+
+                                <label class="element-animation6 btn btn-lg btn-danger btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <input type="radio" name="q10" value="j">Ak
+                                </label>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-column text-start footer-item">
-                            <h4 class="text-light mb-3">Shop Info</h4>
-                            <a class="btn-link" href="">About Us</a>
-                            <a class="btn-link" href="">Contact Us</a>
-                            <a class="btn-link" href="">Privacy Policy</a>
-                            <a class="btn-link" href="">Terms & Condition</a>
-                            <a class="btn-link" href="">Return Policy</a>
-                            <a class="btn-link" href="">FAQs & Help</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-column text-start footer-item">
-                            <h4 class="text-light mb-3">Account</h4>
-                            <a class="btn-link" href="">My Account</a>
-                            <a class="btn-link" href="">Shop details</a>
-                            <a class="btn-link" href="">Shopping Cart</a>
-                            <a class="btn-link" href="">Wishlist</a>
-                            <a class="btn-link" href="">Order History</a>
-                            <a class="btn-link" href="">International Orders</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-light mb-3">Contact</h4>
-                            <p>Address: 1429 Netus Rd, NY 48247</p>
-                            <p>Email: Example@gmail.com</p>
-                            <p>Phone: +0123 4567 8910</p>
-                            <p>Payment Accepted</p>
-                            <img src="img/payment.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
+
+                    <!-- Repite lo mismo para las siguientes 5 preguntas -->
+                </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div>
 
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright bg-dark py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 my-auto text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End -->
+    <button onclick="showResult()">Obtener resultado</button>
 
+    <div id="result" style="margin-top: 20px;"></div>
+</div>
 
+<script>
+    function showResult() {
+        var resultContainer = document.getElementById("result");
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        // Obtener respuestas seleccionadas
+        var q1 = document.querySelector('input[name="q1"]:checked');
+        var q2 = document.querySelector('input[name="q2"]:checked');
+        var q3 = document.querySelector('input[name="q3"]:checked');
+        var q4 = document.querySelector('input[name="q4"]:checked');
+        var q5 = document.querySelector('input[name="q5"]:checked');
+        var q6 = document.querySelector('input[name="q6"]:checked');
+        var q7 = document.querySelector('input[name="q7"]:checked');
+        var q8 = document.querySelector('input[name="q8"]:checked');
+        var q9 = document.querySelector('input[name="q9"]:checked');
+        var q10 = document.querySelector('input[name="q10"]:checked');
 
-        
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        // Verificar si todas las preguntas fueron respondidas
+        if (q1 && q2 && q3 && q4 && q5 && q6 && q7 && q8 && q8 && q10) {
+            // Calcular resultado basado en las respuestas
+            var result = calculateResult(q1.value, q2.value, q3.value, q4.value, q5.value, q6.value, q7.value, q8.value, q9.value, q10.value);
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    </body>
+            // Mostrar el resultado
+            resultContainer.innerHTML = "¡Eres un " + result + "!";
+        } else {
+            // Si no se respondieron todas las preguntas, mostrar un mensaje de error
+            resultContainer.innerHTML = "Por favor, responde todas las preguntas.";
+        }
+    }
 
+    function calculateResult(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10) {
+        // Puedes personalizar la lógica para determinar el resultado según las respuestas
+        if (q1 === "a" && q2 === "a" && q3 === "a" && q4 === "a" && q5 === "a" && q6 === "a" && q7 === "a" && q8 === "a" && q9 === "a" && q10 === "a") {
+            return "Bananin";
+        } else if (q1 === "b" && q2 === "b" && q3 === "b" && q4 === "b" && q5 === "b" && q6 === "b" && q7 === "b" && q8 === "b" && q9 === "b" && q10 === "b") {
+            return "9)	Aura";
+        } else if (q1 === "c" && q2 === "c" && q3 === "c" && q4 === "c" && q5 === "c" && q6 === "c" && q7 === "c" && q8 === "c" && q9 === "c" && q10 === "c") {
+            return "2)	Deriva";
+        }else if(q1 === "d" && q2 === "d" && q3 === "d" && q4 === "d" && q5 === "d" && q6 === "d" && q7 === "d" && q8 === "d" && q9 === "d" && q10 === "d"){
+            return "3)	Travi Scott";
+        }else if(q1 === "e" && q2 === "e" && q3 === "e" && q4 === "e" && q5 === "e" && q6 === "e" && q7 === "e" && q8 === "e" && q9 === "e" && q10 === "e"){
+            return "4)	Midas"
+        }else if(q1 === "f" && q2 === "f" && q3 === "f" && q4 === "f" && q5 === "f" && q6 === "f" && q7 === "f" && q8 === "f" && q9 === "f" && q10 === "f"){
+            return "5)	Agente Jones";
+        }else if(q1 === "g" && q2 === "g" && q3 === "g" && q4 === "g" && q5 === "g" && q6 === "g" && q7 === "g" && q8 === "g" && q9 === "g" && q10 === "g"){
+            return "6)	Renegada";
+        }else if(q1 === "h" && q2 === "h" && q3 === "h" && q4 === "h" && q5 === "h" && q6 === "h" && q7 === "h" && q8 === "h" && q9 === "h" && q10 === "h"){
+            return "7)	Isabelle";
+        }else if(q1 === "i" && q2 === "i" && q3 === "i" && q4 === "i" && q5 === "i" && q6 === "i" && q7 === "i" && q8 === "i" && q9 === "i" && q10 === "i"){
+            return "8)	Mancake";
+        }else if(q1 === "j" && q2 === "j" && q3 === "j" && q4 === "j" && q5 === "j" && q6 === "j" && q7 === "j" && q8 === "j" && q9 === "j" && q10 === "j"){
+            return "Lince";
+        }else {
+            return "Lince";
+        }
+    }
+</script>
+
+</body>
 </html>
