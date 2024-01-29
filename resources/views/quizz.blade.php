@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Snippet - GoSNippets</title>
+    <title>QUIZZ1</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href='' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ asset('assets/estilos1.css') }}">
+   <link rel = "stylesheet" href ="{{asset('assests/estilos1.css')}}">
+    
+
    
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
@@ -14,9 +15,9 @@
 
 </head>
 <body oncontextmenu='return false' class='snippet-body'>
-    <center>
+<center>
         <h1>QUIZ FOR FORNITE </h1>
-    </center>
+        </center>
     
     <div class="container-fluid">
         <div class="modal-dialog">
@@ -24,7 +25,9 @@
 
                 <div class="modal-header">
                     <div class="photo">
-                        <img src="img/color.jpg" alt="Photo" style="width:100%;">
+                        
+                    <img  src="{{('assests/img/color.jpg')}} "alt="Photo" style="width:100%;">
+                    
                       </div>
                     
                     <h3>¿Cuál es tu color favorito?</h3>
@@ -105,7 +108,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="photo">
-                        <img src="img/equipo.jpg" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/equipo.jpg')}} "alt="Photo" style="width:100%;">
+                  
                       </div>
                     
                     <h3>¿Cuál modo es que juegas frecuentemente?</h3>
@@ -186,7 +190,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="photo">
-                        <img src="img/habilidad.jpg" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/habilidad.jpg')}} "alt="Photo" style="width:100%;">
+                        
                       </div>
                     <h3>Escoge una palabra que te defina jugando</h3>
                 </div>
@@ -267,7 +272,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="photo">
-                        <img src="img/lugar.jpg" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/lugar.jpg')}} "alt="Photo" style="width:100%;">
+                        
                       </div>
                     
                     <h3>Escoge un lugar donde aterrizarías (Img de localidades del juego). </h3>
@@ -350,7 +356,8 @@
                 <div class="modal-header">
                    
                     <div class="photo">
-                        <img src="img/picos.jpg" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/picos.jpg')}} "alt="Photo" style="width:100%;">
+                       
                       </div>
                     <h3>¿Cuál de estos picos escogerías?</h3>
                 </div>
@@ -432,7 +439,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="photo">
-                        <img src="img/baile.jpg" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/baile.jpg')}} "alt="Photo" style="width:100%;">
+                        
                       </div>
                     
                     <h3>¿Cuál de estos bailes usarías?</h3>
@@ -517,8 +525,10 @@
                 <div class="modal-header">
                     
                     <div class="photo">
-                        <img src="img/mochila.png" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/mochila.png')}} "alt="Photo" style="width:100%;">
+                        
                       </div>
+                      
                     <h3>¿Cuál de estas mochilas escogerías?</h3>
                 </div>
                 <div class="modal-body">
@@ -598,7 +608,8 @@
                 <div class="modal-header">
                     
                     <div class="photo">
-                        <img src="img/planeador.jpg" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/planeador.jpg')}} "alt="Photo" style="width:100%;">
+                        
                       </div>
                     <h3>¿Cuál de estos planeadores escogerías?</h3>
                 </div>
@@ -680,7 +691,8 @@
                 <div class="modal-header">
                     
                     <div class="photo">
-                        <img src="img/objetos.jpg" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/objetos.jpg')}} "alt="Photo" style="width:100%;">
+                       
                       </div>
                     <h3>¿Qué objeto del juego te gusta más?</h3>
                 </div>
@@ -762,7 +774,8 @@
                 <div class="modal-header">
                     
                     <div class="photo">
-                        <img src="img/armas.jpg" alt="Photo" style="width:100%;">
+                    <img  src="{{('assests/img/armas.jpg')}} "alt="Photo" style="width:100%;">
+                        
                       </div>
                     <h3>¿Qué arma te gusta mas?</h3>
                 </div>
@@ -836,10 +849,13 @@
             </div>
         </div>
     </div>
-
+<div>
+    <center>
     <button onclick="showResult()">Obtener resultado</button>
-
+   
     <div id="result" style="margin-top: 20px;"></div>
+</center>
+    </div>
 </div>
 
 <script>
