@@ -1,4 +1,3 @@
-
 body {
     background-color: #ffffff;
     
@@ -50,6 +49,7 @@ label .btn-label {
 label .glyphicon {
     top: 34%
 }
+
 
 .element-animation1, .element-animation2, .element-animation3, .element-animation4 {
     /* Estilos para las animaciones */
@@ -104,4 +104,5 @@ label .glyphicon {
 
 .modal-body {
     min-height: 300px
+}
 }

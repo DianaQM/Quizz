@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('quizz', function () {
     return view('quizz');
 });
+
+
+Route::get('Home', function () {
+    return view('Home');
+});
+

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>QUIZZ1</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-   <link rel = "stylesheet" href ="{{asset('assests/estilos1.css')}}">
+   <link rel = "stylesheet" href ="{{asset('assests/css/estilos1.css')}}">
     
 
    
