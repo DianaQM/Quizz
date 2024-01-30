@@ -22,7 +22,10 @@ Route::get('quizz', function () {
 });
 
 
-Route::get('Home', function () {
-    return view('Home');
+Route::get('/home', function () {
+    return view('home');
 });
 
+Route::get('/otros', function () {
+    return view('otros');
+});

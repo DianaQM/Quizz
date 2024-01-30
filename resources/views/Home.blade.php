@@ -18,8 +18,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <!-- Libraries Stylesheet -->
-<link href="{{ asset('assests/ccs/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-<link href="{{ asset('assests/css/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+<link href="{{ asset('assests/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+<link href="{{ asset('assests/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
 <!-- Customized Bootstrap Stylesheet -->
 <link href="{{ asset('assests/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -63,7 +63,7 @@
                         <div class="navbar-nav mx-auto">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="shop.html" class="nav-item nav-link">Quiz Fortnite</a>
-                            <a href="shop-detail.html" class="nav-item nav-link">Otros</a>    
+                            <a href="otros.blade.php" class="nav-item nav-link">Otros</a>    
                         </div>
                     </div>
                 </nav>
@@ -105,11 +105,11 @@
                         <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active rounded">
-                                    <img src="img/l.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                    <img src="{{asset('assests/img/l.jpg')}}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
                                     <a href="shop.html" class="btn px-4 py-2 text-white rounded">Quiz</a>
                                 </div>
                                 <div class="carousel-item rounded">
-                                    <img src="img/l2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                    <img src="{{asset('assests/img/l2.jpg')}}" class="img-fluid w-100 h-100 rounded" alt="Second slide">
                                     <a href="shop-detail.html" class="btn px-4 py-2 text-white rounded">Videos</a>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                     <div class="owl-carousel vegetable-carousel justify-content-center">
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
-                                <img src="img/s1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                <img src="{{asset('assests/img/s1.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                             </div>
                             <div class="p-4 rounded-bottom">
                                 <h4>¿Sabias que?...</h4>
@@ -146,7 +146,7 @@
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
-                                <img src="img/s2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                <img src="{{asset('assests/img/s2.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                             </div>
                             <div class="p-4 rounded-bottom">
                                 <h4>¿Sabias que?...</h4>
@@ -157,7 +157,7 @@
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
-                                <img src="img/s3.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
+                                <img src="{{asset('assests/img/s3.jpg')}}" class="img-fluid w-100 rounded-top bg-light" alt="">
                             </div>
                             <div class="p-4 rounded-bottom">
                                 <h4>¿Sabias que?...</h4>
@@ -168,7 +168,7 @@
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
-                                <img src="img/s4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                <img src="{{asset('assests/img/s4.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                             </div>
                             <div class="p-4 rounded-bottom">
                                 <h4>¿Sabias que?...</h4>
@@ -179,7 +179,7 @@
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
-                                <img src="img/s5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                <img src="{{asset('assests/img/s5.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                             </div>
                             <div class="p-4 rounded-bottom">
                                 <h4>¿Sabias que?...</h4>
@@ -208,7 +208,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative">
-                                <img src="img/astro1.png" class="img-fluid w-100 rounded" alt="">
+                                <img src="{{asset('assests/img/astro1.png')}}" class="img-fluid w-100 rounded" alt="">
                             </div>
                         </div>
                     </div>
@@ -258,8 +258,8 @@
 
         
     <!-- JavaScript Libraries -->
-    <script src="{{asset('assests/https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')}}"></script>
-    <script src="{{asset('assests/https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('assests/lib/easing/easing.min.js')}}"></script>
     <script src="{{asset('assests/lib/waypoints/waypoints.min.js')}}"></script>
     <script src="{{asset('assests/lib/lightbox/js/lightbox.min.js')}}"></script>
