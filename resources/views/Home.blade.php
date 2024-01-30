@@ -18,8 +18,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <!-- Libraries Stylesheet -->
-<link href="{{ asset('assests/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-<link href="{{ asset('assests/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+<link href="{{ asset('assests/ccs/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+<link href="{{ asset('assests/css/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
 <!-- Customized Bootstrap Stylesheet -->
 <link href="{{ asset('assests/css/bootstrap.min.css') }}" rel="stylesheet">
