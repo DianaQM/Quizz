@@ -863,7 +863,10 @@
 </div>
 
 <script>
-    function showResult() {
+     var hasAnsweredQuiz = false; 
+
+function showResult() {
+    if (!hasAnsweredQuiz) { 
         var resultContainer = document.getElementById("result");
 
         // Obtener respuestas seleccionadas
@@ -885,11 +888,41 @@
 
             // Mostrar el resultado
             resultContainer.innerHTML = "¡Eres un " + result + "!";
+            hasAnsweredQuiz = true; // Marcar que el usuario ha contestado el quiz
+
         } else {
             // Si no se respondieron todas las preguntas, mostrar un mensaje de error
             resultContainer.innerHTML = "Por favor, responde todas las preguntas.";
         }
+    } else {
+        
+        showPopup('Ya has contestado el quiz. No puedes volver a hacerlo.');
     }
+}
+
+// Agrega estas funciones al final de tu script
+function showPopup(message) {
+    var popupContainer = document.getElementById('popup-container');
+    var popupContent = document.getElementById('popup-content');
+
+    popupContent.innerHTML = message;
+    popupContainer.style.display = 'flex';
+
+    // Agrega un evento para cerrar la pantalla emergente haciendo clic fuera de ella
+    window.addEventListener('click', function (event) {
+        if (event.target === popupContainer) {
+            hidePopup();
+        }
+    });
+}
+
+function hidePopup() {
+    document.getElementById('popup-container').style.display = 'none';
+}
+
+// Agrega un botón para cerrar la pantalla emergente
+document.getElementById('close-popup').addEventListener('click', hidePopup);
+
 
     function calculateResult(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10) {
         // Puedes personalizar la lógica para determinar el resultado según las respuestas
@@ -918,6 +951,11 @@
         }
     }
 </script>
-
+<div id="popup-container">
+    <div id="popup-content">
+        <!-- Contenido de la pantalla emergente -->
+        <span id="close-popup">&times;</span>
+    </div>
+</div>
 </body>
 </html>
