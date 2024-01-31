@@ -11,7 +11,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -31,7 +33,8 @@
 <body>
 
     <!-- Spinner Start -->
-    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
@@ -39,31 +42,19 @@
 
     <!-- Navbar start -->
     <div class="container-fluid fixed-top">
-        <div class="container topbar bg-primary d-none d-lg-block">
-            <div class="d-flex justify-content-between">
-                <div class="top-info ps-2">
-                    <small class="me-3"><a href="#" class="text-white"></a></small>
-                    <small class="me-3"><a href="#" class="text-white"></a></small>
-                </div>
-                <div class="top-link pe-2">
-                    <a href="#" class="text-white"><small class="text-white mx-2"></small></a>
-                    <a href="#" class="text-white"><small class="text-white mx-2"></small></a>
-                    <a href="#" class="text-white"><small class="text-white ms-2"></small></a>
-                </div>
-            </div>
-        </div>
         <div class="container px-0">
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
                 <a href="index.html" class="navbar-brand">
                     <h1 class="text-primary display-6">QUIZ</h1>
                 </a>
-                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars text-primary"></span>
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
                         <a href="home.blade.php" class="nav-item nav-link"> Login</a>
-                        <a href="shop.htl" class="nav-item nav-link">Quiz Fortnite</a>
+                        <a href="shop.html" class="nav-item nav-link">Quiz Fortnite</a>
                         <a href="shop-detail.html" class="nav-item nav-link active">Otros</a>
                     </div>
             </nav>
@@ -79,7 +70,8 @@
                     <h4 class="mb-3 text-secondary">Videos</h4>
                     <h1 class="mb-5 display-3 text-primary">Consejos y Entretenimiento</h1>
                     <h4 class="mb-3 text-secondary">
-                        ¡Bienvenido a nuestro rincón de diversión en línea, donde la emoción de Fortnite cobra vida! Sumérgete en un universo lleno de desafíos, estrategia y pura acción.</h4>
+                        ¡Bienvenido a nuestro rincón de diversión en línea, donde la emoción de Fortnite cobra vida!
+                        Sumérgete en un universo lleno de desafíos, estrategia y pura acción.</h4>
                     <div class="position-relative mx-auto">
                     </div>
                 </div>
@@ -87,19 +79,23 @@
                     <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item active rounded">
-                                <img src="{{asset('assests/img/l.jpg')}}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                <img src="{{ asset('assests/img/l.jpg') }}"
+                                    class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
                                 <a href="index.html" class="btn px-4 py-2 text-white rounded">Home</a>
                             </div>
                             <div class="carousel-item rounded">
-                                <img src="{{asset('assests/img/l3.jpg')}}" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                <img src="{{ asset('assests/img/l3.jpg') }}" class="img-fluid w-100 h-100 rounded"
+                                    alt="Second slide">
                                 <a href="shop.html" class="btn px-4 py-2 text-white rounded">Quiz</a>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -117,70 +113,81 @@
             <div class="owl-carousel vegetable-carousel justify-content-center">
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="{{asset('assests/img/v1.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
+                        <img src="{{ asset('assests/img/v1.jpg') }}" class="img-fluid w-100 rounded-top" alt="">
                     </div>
                     <div class="p-4 rounded-bottom">
                         <h4>FORTNITE 2.5</h4>
                         <p></p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                            <a href="https://youtu.be/nHeiHRKz5eM?si=9YyyV7P85K_yFu6w" class="btn border border-secondary rounded-pill px-3 text-primary">IR</a>
+                            <a href="https://youtu.be/nHeiHRKz5eM?si=9YyyV7P85K_yFu6w"
+                                class="btn border border-secondary rounded-pill px-3 text-primary">IR</a>
                         </div>
                     </div>
                 </div>
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="{{asset('assests/img/v2.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
+                        <img src="{{ asset('assests/img/v2.jpg') }}" class="img-fluid w-100 rounded-top"
+                            alt="">
                     </div>
 
                     <div class="p-4 rounded-bottom">
                         <h4>Jelty | Highlights #1 | </h4>
                         <p></p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                            <a href="https://youtu.be/KBMQlrN3Q8Y?si=HNO6NZLYT0G4YVsa" class="btn border border-secondary rounded-pill px-3 text-primary">IR</a>
+                            <a href="https://youtu.be/KBMQlrN3Q8Y?si=HNO6NZLYT0G4YVsa"
+                                class="btn border border-secondary rounded-pill px-3 text-primary">IR</a>
                         </div>
                     </div>
                 </div>
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="{{asset('assests/img/v3.jpg')}}" class="img-fluid w-100 rounded-top bg-light" alt="">
+                        <img src="{{ asset('assests/img/v3.jpg') }}" class="img-fluid w-100 rounded-top bg-light"
+                            alt="">
                     </div>
                     <div class="p-4 rounded-bottom">
                         <h4>DED, JUAN Y BARCA REACCIONAN AL EVENTO MAS AMBICIOSO DE FORTNITE</h4>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                            <a href="https://youtu.be/8FoJsfp-tgE?si=aB-ROBh4yqNl6Bpa" class="btn border border-secondary rounded-pill px-3 text-primary"> IR</a>
+                            <a href="https://youtu.be/8FoJsfp-tgE?si=aB-ROBh4yqNl6Bpa"
+                                class="btn border border-secondary rounded-pill px-3 text-primary"> IR</a>
                         </div>
                     </div>
                 </div>
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="{{asset('assests/img/v4.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
+                        <img src="{{ asset('assests/img/v4.jpg') }}" class="img-fluid w-100 rounded-top"
+                            alt="">
                     </div>
                     <div class="p-4 rounded-bottom">
                         <h4>ASÍ ES MI SKIN DE FORTNITE - TheGrefg</h4>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                            <a href="https://youtu.be/fgGvw9RdwZQ?si=YrQmcw-hr39geWxn" class="btn border border-secondary rounded-pill px-3 text-primary"> IR</a>
+                            <a href="https://youtu.be/fgGvw9RdwZQ?si=YrQmcw-hr39geWxn"
+                                class="btn border border-secondary rounded-pill px-3 text-primary"> IR</a>
                         </div>
                     </div>
                 </div>
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="{{asset('assests/img/v.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
+                        <img src="{{ asset('assests/img/v.jpg') }}" class="img-fluid w-100 rounded-top"
+                            alt="">
                     </div>
                     <div class="p-4 rounded-bottom">
                         <h4>Estereotipos de Skins en Fortnite 13</h4>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                            <a href="https://youtu.be/RR9kxOvmy_8?si=_9eAQKU9LRnEk-pn" class="btn border border-secondary rounded-pill px-3 text-primary">IR</a>
+                            <a href="https://youtu.be/RR9kxOvmy_8?si=_9eAQKU9LRnEk-pn"
+                                class="btn border border-secondary rounded-pill px-3 text-primary">IR</a>
                         </div>
                     </div>
                 </div>
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="{{asset('assests/img/v6.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
+                        <img src="{{ asset('assests/img/v6.jpg') }}" class="img-fluid w-100 rounded-top"
+                            alt="">
                     </div>
                     <div class="p-4 rounded-bottom">
                         <h4>40 CURIOSIDADES DE LA TEMPORADA 4 DE FORTNITE</h4>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                            <a href="https://youtu.be/b0NLVmYaUtM?si=vm7je-dzNkJOxjF0" class="btn border border-secondary rounded-pill px-3 text-primary">IR</a>
+                            <a href="https://youtu.be/b0NLVmYaUtM?si=vm7je-dzNkJOxjF0"
+                                class="btn border border-secondary rounded-pill px-3 text-primary">IR</a>
                         </div>
                     </div>
                 </div>
@@ -199,7 +206,8 @@
                 </div>
                 <div class="modal-body d-flex align-items-center">
                     <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                        <input type="search" class="form-control p-3" placeholder="keywords"
+                            aria-describedby="search-icon-1">
                         <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
@@ -258,19 +266,20 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i
+                class="fa fa-arrow-up"></i></a>
 
 
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="{{asset('assests/lib/easing/easing.min.js')}}"></script>
-        <script src="{{asset('assests/lib/waypoints/waypoints.min.js')}}"></script>
-        <script src="{{asset('assests/lib/lightbox/js/lightbox.min.js')}}"></script>
-        <script src="{{asset('assests/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+        <script src="{{ asset('assests/lib/easing/easing.min.js') }}"></script>
+        <script src="{{ asset('assests/lib/waypoints/waypoints.min.js') }}"></script>
+        <script src="{{ asset('assests/lib/lightbox/js/lightbox.min.js') }}"></script>
+        <script src="{{ asset('assests/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
         <!-- Template Javascript -->
-        <script src="{{asset('assests/js/main.js')}}"></script>
+        <script src="{{ asset('assests/js/main.js') }}"></script>
 </body>
 
 </html>
