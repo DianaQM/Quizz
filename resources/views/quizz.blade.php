@@ -20,9 +20,13 @@
     <link rel="stylesheet" href="{{ asset('assests/css/estilos1.css') }}">
     <!-- Template Stylesheet -->
     <link href="{{ asset('assests/css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-MBkf3woXIf+fWg4os+Gop1iMzAmG1Jcbrl3A4BqrJ62dnAz+9ydMaI5uo6o+LzB5W2H5Y76e1VWSTT6S5Bjog=="
+        crossorigin="anonymous" />
+
     <style>
         body {
-            background: url('{{ asset('assests/img/z.jpg') }}') no-repeat center center fixed;
+            background: url('{{ asset('assests/img/Er1.jpg') }}') no-repeat center center fixed;
         }
     </style>
 </head>
@@ -36,7 +40,7 @@
                 <a href="index.html" class="navbar-brand">
                     <h1 class="text-primary display-6">QUIZ</h1>
                 </a>
-                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler py-2 px-2" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars text-primary"></span>
                 </button>
@@ -52,7 +56,8 @@
 </head>
 
 <br><br><br><br><br><br>
-<div class="text-center mt-5 mb-5">
+<div class="text-center mt-5 mb-5 card mx-auto p-4"
+    style="width: 50%; box-shadow: 4px 4px 8px rgba(35, 160, 218, 0.945), 0 8px 16px rgb(30, 109, 255);">
     <h1>QUIZZ FOR FORNITE</h1>
 </div>
 
@@ -153,7 +158,7 @@
         </div>
     </div>
     </div>
-
+    <br><br><br>
     <div class="container">
         <div class="card mx-auto p-2"
             style="width: 50%; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);">
@@ -201,6 +206,7 @@
 
                         </div>
                     </div>
+
                     <div class="col-md-6">
                         <!-- Columna derecha con 5 preguntas y respuestas -->
                         <div class="quiz" id="quiz" data-toggle="buttons">
@@ -243,14 +249,13 @@
                     </div>
                 </div>
 
-
                 <!-- Repite lo mismo para las siguientes 5 preguntas -->
             </div>
         </div>
     </div>
     </div>
     </div>
-
+    <br><br><br>
     <div class="container">
         <div class="card mx-auto p-2"
             style="width: 50%; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);">
@@ -350,7 +355,7 @@
         </div>
     </div>
     </div>
-
+    <br><br><br>
 
     <div class="container">
         <div class="card mx-auto p-2"
@@ -452,7 +457,7 @@
     </div>
     </div>
 
-
+    <br><br><br>
     <div class="container">
         <div class="card mx-auto p-2"
             style="width: 50%; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);">
@@ -554,7 +559,7 @@
     </div>
 
 
-
+    <br><br><br>
     <div class="container">
         <div class="card mx-auto p-2"
             style="width: 50%; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);">
@@ -657,7 +662,7 @@
 
 
 
-
+    <br><br><br>
     <div class="container">
         <div class="card mx-auto p-2"
             style="width: 50%; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);">
@@ -757,7 +762,7 @@
         </div>
     </div>
     </div>
-
+    <br><br><br>
     <div class="container">
         <div class="card mx-auto p-2"
             style="width: 50%; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);">
@@ -858,7 +863,7 @@
     </div>
     </div>
 
-
+    <br><br><br>
     <div class="container">
         <div class="card mx-auto p-2"
             style="width: 50%; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);">
@@ -959,7 +964,7 @@
     </div>
     </div>
 
-
+    <br><br><br>
     <div class="container">
         <div class="card mx-auto p-2"
             style="width: 50%; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);">
@@ -1060,6 +1065,7 @@
     </div>
     </div>
     <div>
+        <br><br>
         <center>
             <button onclick="showResult()">Obtener resultado</button>
 
@@ -1076,7 +1082,6 @@
         </center>
     </div>
     </div>
-
     <script>
         function showResult() {
             var resultContainer = document.getElementById("result");
